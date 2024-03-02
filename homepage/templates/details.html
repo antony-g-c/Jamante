@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<head>
+    <title>{{mymember.name}}</title>
+    <style>
+        /* Basic styling for buttons */
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Product details -->
+<h1>{{ mymember.name }}</h1>
+<img src={{mymember.image}} alt={{mymember.name}} width="250" height="167">
+<p>Stock left: {{ mymember.leftInStock }}</p>
+<p>Price: $XX.XX</p>
+
+<!-- Buy and Add to Cart buttons -->
+<button class="btn" onclick="addToCart()">Add to Cart</button>
+<button class="btn" onclick="buyNow()">Buy Now</button>
+
+<script>
+    function addToCart() {
+        // Perform actions to add the item to the cart (needs backend functionality)
+        alert('Item added to cart!');
+    }
+
+    function buyNow() {
+        // Perform actions to proceed with the purchase (needs backend functionality)
+        alert('Redirecting to checkout!');
+    }
+</script>
+
+<p><br>Back to <a href="/homepage">Product List</a></p>
+
+</body>
+</html>

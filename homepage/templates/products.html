@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>Jamante</h1>
+    <title>Jamante</title>
+    <style>
+        /* Basic styling for the navigation bar */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #717471;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #4e524e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+</body>
+</html>
+
+<html>
+<body>
+
+
+<h2>Products</h2>
+  
+<ul>
+  {% for x in mymembers %}
+    
+    <a href="details/{{ x.id }}"><img src={{x.image}} alt={{x.name}} width="250" height="167"></a>
+    <p>{{ x.name }}<br>Stock Left:{{x.leftInStock}}</p>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
